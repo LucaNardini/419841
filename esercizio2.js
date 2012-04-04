@@ -143,7 +143,74 @@ var BPavilion = function(){
 	var z = T([0])([0,5])(tetto);
 	var q = T([1])([13.2])(z);
 	var m = T([2])([6])(q);
-
 	DRAW(m);
+	var muro = SIMPLEX_GRID([[11.3],[0.05],[6]]);
+	var t = T([0,1])([30,5]);
+	var c = STRUCT([t,muro]);
+	DRAW(c);
+		var muro = SIMPLEX_GRID([[0.05],[2],[6]]);
+	var t = T([0,1])([30,5]);
+	var w = STRUCT([t,muro]);
+	DRAW(w);
+	var muro = SIMPLEX_GRID([[11.7],[0.2],[6]]);
+	var t = T([0,1])([41.3,4.9]);
+	var d = STRUCT([t,muro]);
+	DRAW(d);
+	var muro = SIMPLEX_GRID([[15.3],[0.2],[6]]);
+	var t = T([0,1])([37.7,15.9]);
+	var l = STRUCT([t,muro]);
+	DRAW(l);
+	var muro = SIMPLEX_GRID([[0.2],[11.2],[6]]);
+	var t = T([0,1])([52.9,4.9]);
+	var p = STRUCT([t,muro]);
+	DRAW(p);
+	var tetto = SIMPLEX_GRID([[25],[13]]);
+	var z = T([0])([24])(tetto);
+	var q = T([1])([4])(z);
+	var o = T([2])([6])(q);
+	DRAW(o);
+	var muro = SIMPLEX_GRID([[18.4],[0.2],[6]]);
+	var t = T([0,1])([7.8,14.9]);
+	var p = STRUCT([t,muro]);
+	DRAW(p);
+	var muro = SIMPLEX_GRID([[8.6],[0.2],[6]]);
+	var t = T([0,1])([25.2,6.9]);
+	var p = STRUCT([t,muro]);
+	DRAW(p);
+	
+	var muro = SIMPLEX_GRID([[0.05],[6],[6]]);
+	var t = T([0,1])([31,7.5]);
+	var e = STRUCT([t,muro]);
+	DRAW(e);
+		
+	var muro = SIMPLEX_GRID([[0.05],[6],[6]]);
+	var t = T([0,1])([32,7.5]);
+	var r = STRUCT([t,muro]);
+	DRAW(r);
+
+	var muro = SIMPLEX_GRID([[10],[0.05],[6]]);
+	var t = T([0,1])([30,13.5]);
+	var c = STRUCT([t,muro]);
+	DRAW(c);
+
+	var muro = SIMPLEX_GRID([[0.05],[2],[6]]);
+	var t = T([0,1])([40,13.5]);
+	var r = STRUCT([t,muro]);
+	DRAW(r);
+
+	var muro = SIMPLEX_GRID([[5],[0.2],[6]]);
+	var t = T([0,1])([37.5,11.5]);
+	var c = STRUCT([t,muro]);
+	DRAW(c);
+
+	var muro = SIMPLEX_GRID([[0.05],[6.5],[6]]);
+	var t = T([0,1])([38.8,5]);
+	var r = STRUCT([t,muro]);
+	DRAW(r);
+
+	var muro = SIMPLEX_GRID([[0.05],[6.5],[6]]);
+	var t = T([0,1])([42.5,5]);
+	var r = STRUCT([t,muro]);
+	DRAW(r);
 
 }();
