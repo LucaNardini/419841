@@ -39,11 +39,8 @@ var disegnaBordiSpessi = function(){
 	DRAW(POLYLINE([[40.5,5],[40.5,4.9],[50.1,4.9],[50.1,16.1],[36.5,16.1],[36.5,16]]));
 }
 
-
-
-
-var disegnaPianoTerra = function(){
- disegnaGriglia(39,[0,0],[1,1]);
+var disegnaGrigliaCompleta = function(){
+	disegnaGriglia(39,[0,0],[1,1]);
  disegnaGriglia(1,[0,1],[1,2]);
  disegnaGriglia(15,[20,1],[21,2]);
  disegnaGriglia(15,[20,2],[21,3]);
@@ -67,13 +64,21 @@ var disegnaPianoTerra = function(){
  disegnaGriglia(8,[1,19],[2,20]);
  disegnaGriglia(8,[1,20],[2,21]);
  disegnaLinea([[1,12],[0,12],[0,22]],[[0,22],[10,22],[10,17]]);
+}
+
+var disegnaLinee = function(){
  //Disegno le linee del piano terra che non sono quadratini
  DRAW(POLYLINE([[39,17],[46,17],[46,16]]));
  DRAW(POLYLINE([[50,6],[50,16],[46,16]]));
  DRAW(POLYLINE([[1,2],[1,10],[1,2]]));
- DRAW(POLYLINE([[39,1],[39,4],[39,1]]));
+ DRAW(POLYLINE([[39,1],[39,4],[39,1]]));	
+}
+
+var disegnaPianoTerra = function(){
+ disegnaGrigliaCompleta();
+ disegnaLinee();
  //Disegno la scalinata
-disegnaScalinata(8);
+ disegnaScalinata(8);
 //Disegno i bordi spessi 
-disegnaBordiSpessi();
+ disegnaBordiSpessi();
 }();
