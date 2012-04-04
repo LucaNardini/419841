@@ -113,15 +113,15 @@ var BPavilion = function(){
 	var t2= T([0,1])([49,5]);
 	DRAW(STRUCT([t2,a3]));
 	var muro = SIMPLEX_GRID([[7.1],[0.2],[6]]);
-	var t = T([0,1])([0.9,0.8]);
+	var t = T([0,1])([1.01,1.01]);
 	var x = STRUCT([t,muro]);
 	DRAW(x);
 	var muro = SIMPLEX_GRID([[0.2],[21.4],[6]]); 
-	var t = T([0,1])([0.9,0.8]);
+	var t = T([0,1])([0.99,0.99]);
 	var y = STRUCT([t,muro]);
 	DRAW(y);
 	var muro = SIMPLEX_GRID([[8.2],[0.2],[6]]);
-	var t = T([0,1])([0.9,22.2]);
+	var t = T([0,1])([0.99,22.2]);
 	var z = STRUCT([t,muro]);
 	DRAW(z);
 	var muro = SIMPLEX_GRID([[0.2],[5.2],[6]]);
@@ -142,7 +142,7 @@ var BPavilion = function(){
 	var tetto = SIMPLEX_GRID([[10],[10]]);
 	var z = T([0])([0,5])(tetto);
 	var q = T([1])([13.2])(z);
-	var m = T([2])([6])(q);
+	var m = T([2])([6.01])(q);
 	DRAW(m);
 	var muro = SIMPLEX_GRID([[11.3],[0.05],[6]]);
 	var t = T([0,1])([30,5]);
@@ -167,7 +167,7 @@ var BPavilion = function(){
 	var tetto = SIMPLEX_GRID([[25],[13]]);
 	var z = T([0])([24])(tetto);
 	var q = T([1])([4])(z);
-	var o = T([2])([6])(q);
+	var o = T([2])([6.01])(q);
 	DRAW(o);
 	var muro = SIMPLEX_GRID([[18.4],[0.2],[6]]);
 	var t = T([0,1])([7.8,14.9]);
@@ -212,5 +212,23 @@ var BPavilion = function(){
 	var t = T([0,1])([42.5,5]);
 	var r = STRUCT([t,muro]);
 	DRAW(r);
+
+	var muro = SIMPLEX_GRID([[0.05],[8],[6]]);
+	var t = T([0,1])([44.8,6.5]);
+	var r = STRUCT([t,muro]);
+	DRAW(r);
+
+    var a1 = SIMPLEX_GRID([[0.4,-1.6,0.4,-1.6,0.4,-1.6,0.4,-1.6,0.4,-1.6,0.4,-1.6,0.4,-1.6,0.4],[0.4],[0.4]]);
+    a1 = T([2])([1])(a1);
+    var i = T([0,1])([7.9,14.2]);
+
+    DRAW(STRUCT([i,a1])); // cubetti su cui poggia la panchina lunga
+
+    var panchina = SIMPLEX_GRID([[15],[0.5]]);
+    var k = T([0])([7.9])(panchina);
+    var m = T([1])([14.1])(k);
+    var q = T([2])([1.41])(m);
+    DRAW(q); //la panchina vera e propria
+
 
 }();
