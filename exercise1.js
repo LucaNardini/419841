@@ -17,6 +17,27 @@ var polyB = POLYLINE(arraydiarray2);
 DRAW(STRUCT([polyA,polyB]));	
 }
 
+var disegnaScalinata = function(numeroGradini){
+	var distanza = 4 / numeroGradini;
+	var q = 35;
+	var y = 4;
+	var x = 1;
+	for(var i =0; i< numeroGradini;i++){
+		if(i%2==0){DRAW(POLYLINE([[q,2.5],[q+distanza,2.5]]));}
+		else{DRAW(POLYLINE([[q,2],[q+distanza,2]]));
+			 DRAW(POLYLINE([[q,3],[q+distanza,3]]));
+			}
+		q = q+ distanza;
+		DRAW(POLYLINE([[q,x],[q,y],[q,x]]));
+	}
+}
+
+
+var disegnaBordiSpessi = function(){
+
+	DRAW(POLYLINE([[8,0.9],[0.9,0.9],[0.9,21.1],[9.1,21.1],[9.1,17]]));
+	DRAW(POLYLINE([[40.5,5],[40.5,4.9],[50.1,4.9],[50.1,16.1],[36.5,16.1],[36.5,16]]));
+}
 
 
 
@@ -46,11 +67,13 @@ var disegnaPianoTerra = function(){
  disegnaGriglia(8,[1,19],[2,20]);
  disegnaGriglia(8,[1,20],[2,21]);
  disegnaLinea([[1,12],[0,12],[0,22]],[[0,22],[10,22],[10,17]]);
+ //Disegno le linee del piano terra che non sono quadratini
  DRAW(POLYLINE([[39,17],[46,17],[46,16]]));
  DRAW(POLYLINE([[50,6],[50,16],[46,16]]));
  DRAW(POLYLINE([[1,2],[1,10],[1,2]]));
- DRAW(POLYLINE([[1,2],[1,10],[1,2]]));
-
-}
-
-disegnaPianoTerra();
+ DRAW(POLYLINE([[39,1],[39,4],[39,1]]));
+ //Disegno la scalinata
+disegnaScalinata(8);
+//Disegno i bordi spessi 
+disegnaBordiSpessi();
+}();
