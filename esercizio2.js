@@ -140,8 +140,10 @@ var BPavilion = function(){
 	var m = T([0,1])([37,1]);
 	DRAW(STRUCT([m,scale]));
 	var tetto = SIMPLEX_GRID([[10],[10]]);
-	var z = T([0,1])([0,5,13.2])(tetto);
+	var z = T([0])([0,5])(tetto);
+	var q = T([1])([13.2])(z);
+	var m = T([2])([6])(q);
 
-	DRAW(T([2])([6])(z));
+	DRAW(m);
 
 }();
