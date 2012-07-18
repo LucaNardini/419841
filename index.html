@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Final Project : 3D Model of Andrea Palladio's Villa Foscari." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Final Project</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/LucaNardini/419841">View on GitHub</a>
+
+          <h1 id="project_title">Final Project</h1>
+          <h2 id="project_tagline">3D Model of Andrea Palladio's Villa Foscari.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/LucaNardini/419841/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/LucaNardini/419841/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><img src="http://www.google.it/url?source=imglanding&amp;ct=img&amp;q=http://www.robertomarini.net/gallery/d/949-2/Villa+Foscari+_La+Malcontenta_+12.jpg&amp;sa=X&amp;ei=-u4GUPvyBInl4QS88tnJCQ&amp;ved=0CAkQ8wc&amp;usg=AFQjCNELQDU23XeYndBMLCTjh20dBnljYg" alt="Villa Foscari"></p>
+
+<h3>Introduction</h3>
+
+<p>Villa Foscari is a Patrician Villa in Mira, near Venice, northern Italy, designed by the Italian architect Andrea Palladio. </p>
+
+<p>It is also known as La Malcontenta, a nickname which it received when the spouse of one of the Foscaris was locked up in the house because she allegedly didn't live up to her conjugal duty.</p>
+
+<p>More informations and tips can be found at:
+1. <a href="http://en.wikipedia.org/wiki/Villa_Foscari">Wikipedia</a>
+2. <a href="http://www.lamalcontenta.com/">Main-Page</a> </p>
+
+<h3>Hierarchical decomposition of the model</h3>
+
+<p>During to approach to the creation of three-dimensional model, we chose to hierarchically decompose the structure of the villa into five-plus-one parts:</p>
+
+<ul>
+<li><strong>The Twin Stairs and the Colonnade-Basement</strong></li>
+<li><strong>The Main Building</strong></li>
+<li>
+<strong>The Colonnade</strong> <em>(better, A column)</em>
+</li>
+<li><strong>The Main Roof and the Roof upon the Colonnade</strong></li>
+<li><strong>The Back-Side of the Villa</strong></li>
+<li>
+<strong>All the other stuff</strong> <em>(such as windows, banisters, gratings...)</em>
+</li>
+</ul><h3>Twin Stairs and Colonnade-Basement</h3>
+
+<p>Due its symmetrical nature, Villa Foscari can be split in a right-half and a left-half.</p>
+
+<p>Let's concentrate on the last one, because we'll obtain the other half simply with a <code>S</code> trasformation.
+Moreover Rotational trasformations, <code>R</code>, are used to create the upper side of the stairs and due its squareness, we'll use mostly <code>CUBOID</code> functions.</p>
+
+<p><img src="http://s18.postimage.org/dzyvu1q53/Schermata_07_2456127_alle_19_27_24.png" alt="The Twin Stairs">
+The same trick can be used to draw the Colonnade_Basement, which is exactly between the twin stairs.
+<img src="http://s15.postimage.org/5j9xwt7bd/Schermata_07_2456127_alle_19_38_11.png" alt="Colonnade_Basement"></p>
+
+<p>Here you can see the final result, combining the stairs and the basement.
+<img src="http://s16.postimage.org/suueyi40z/Schermata_07_2456127_alle_19_40_57.png" alt="Result"></p>
+
+<h3>Main Building</h3>
+
+<h3>The Colonnade</h3>
+
+<p>The colonnade is the most complex part of the project as it was decided to model the capital as an Archimedean spiral drawn by a NUBS (Archimedean spiral). It was also used a light-domain to avoid overloading the global model.</p>
+
+<p>To draw the column instead, we chose to adopt divide-and-conquer-approach:</p>
+
+<ul>
+<li>
+<em>Column-Base</em> with <code>NUBS</code> and <code>ROTATIONAL SURFACE</code>.</li>
+<li>
+<em>Column-Shaft</em> with a <code>CYLINDER_SURFACE</code>
+</li>
+<li>
+<em>Column-Capital</em> still with <code>NUBS</code> <code>ROTATIONAL SURFACE</code> and <code>BEZIER</code>
+</li>
+</ul><h3>The Main Roof and the Roof upon the Colonnade</h3>
+
+<h3>The Back_Side of the Villa</h3>
+
+<h3>All the other stuff</h3>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Final Project maintained by <a href="https://github.com/LucaNardini">LucaNardini</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("CVDLAB-CG FINAL PROJECT");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
